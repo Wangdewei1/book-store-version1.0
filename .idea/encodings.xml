@@ -4,6 +4,7 @@
     <file url="file://$PROJECT_DIR$/book-store-admin/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/book-store-admin/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/book-store-common-utils/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/book-store-common-utils/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/book-store-controller/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/book-store-controller/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/book-store-dao/src/main/java" charset="UTF-8" />
@@ -11,6 +12,9 @@
     <file url="file://$PROJECT_DIR$/book-store-front/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/book-store-front/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/book-store-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/book-store-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

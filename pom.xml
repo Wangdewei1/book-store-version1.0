@@ -25,12 +25,22 @@
         <junit.version>4.13.2</junit.version>
         <servlet.version>4.0.1</servlet.version>
         <jsp.version>2.3.3</jsp.version>
-        <thymeleaf.version>3.1.0.RELEASE</thymeleaf.version>
+        <thymeleaf.version>3.0.12.RELEASE</thymeleaf.version>
         <mysql.version>8.0.30</mysql.version>
         <connect-dbutils-version>1.7</connect-dbutils-version>
         <log4j-version>1.2.17</log4j-version>
         <pagehelper-version>5.3.2</pagehelper-version>
         <mybatis-version>3.5.11</mybatis-version>
+        <spring-webMvc-version>5.3.27</spring-webMvc-version>
+        <thymeleaf-spring5-version>3.0.12.RELEASE</thymeleaf-spring5-version>
+        <spring-aop-version>5.3.27</spring-aop-version>
+        <spring-tx-version>5.3.27</spring-tx-version>
+        <spring-context-version>5.3.27</spring-context-version>
+        <common-unload-version>1.4</common-unload-version>
+        <jacksion-bind-version>2.14.2</jacksion-bind-version>
+        <jacksion-core-version>2.14.2</jacksion-core-version>
+        <jacksion-annotation-version>2.14.2</jacksion-annotation-version>
+        <hibernate-validator-version>6.0.17.Final</hibernate-validator-version>
     </properties>
 
     <dependencyManagement>
@@ -57,6 +67,15 @@
             </dependency>
 
             <!--thymeleaf版本绑定-->
+
+
+
+            <dependency>
+                <groupId>org.thymeleaf</groupId>
+                <artifactId>thymeleaf-spring5</artifactId>
+                <version>${thymeleaf-spring5-version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.thymeleaf</groupId>
                 <artifactId>thymeleaf</artifactId>
@@ -95,6 +114,66 @@
                 <groupId>org.mybatis</groupId>
                 <artifactId>mybatis</artifactId>
                 <version>${mybatis-version}</version>
+            </dependency>
+
+            <!--mybatis-webMvc 整合依赖-->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring-webMvc-version}</version>
+            </dependency>
+
+            <!--spring核心包-->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring-context-version}</version>
+            </dependency>
+
+            <!--spring-tx-->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${spring-tx-version}</version>
+            </dependency>
+
+            <!--spring-aop-->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>${spring-aop-version}</version>
+            </dependency>
+
+            <!--file unload文件上传-->
+            <dependency>
+                <groupId>commons-fileupload</groupId>
+                <artifactId>commons-fileupload</artifactId>
+                <version>${common-unload-version}</version>
+            </dependency>
+
+            <!--绑定类型转换-->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jacksion-bind-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jacksion-core-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jacksion-annotation-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.hibernate.validator</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${hibernate-validator-version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
