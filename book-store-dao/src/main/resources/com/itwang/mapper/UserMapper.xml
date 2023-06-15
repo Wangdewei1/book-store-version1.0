@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itwang.mapper.UserMapper">
+    <!--全字段-->
+    <sql id="Colm_Of_AllFiled">
+        user_id,user_name,user_pwd,email
+    </sql>
+
+    <select id="userLoginByUsernameAndPassword" resultType="User">
+        select
+        <include refid="Colm_Of_AllFiled"></include>
+        from
+        t_user
+        <where>
+            <if test="username != null and username != ''">
+                and user_name = #{username}
+            </if>
+            <if test="password != null and password != ''">
+                and user_pwd = #{password}
+            </if>
+        </where>
+    </select>
+</mapper>

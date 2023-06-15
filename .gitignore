@@ -1,0 +1,6 @@
+# Project exclude paths
+/book-store-common-utils/target/
+/book-store-controller/target/
+/book-store-dao/target/
+/book-store-front/target/
+/book-store-service/target/
