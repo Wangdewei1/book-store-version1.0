@@ -11,9 +11,7 @@ import java.io.UnsupportedEncodingException;
 @RestController
 public class IndexController {
     @RequestMapping("/index.html")
-    public ModelAndView toIndexPage(ModelAndView modelAndView, HttpServletResponse response, HttpServletRequest request) throws UnsupportedEncodingException {
-        response.setContentType("text/html;charset=utf-8");
-        request.setCharacterEncoding("UTF-8");
+    public ModelAndView toIndexPage(ModelAndView modelAndView) throws UnsupportedEncodingException {
         modelAndView.setViewName("index");
         return modelAndView;
     }

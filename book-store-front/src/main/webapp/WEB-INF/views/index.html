@@ -11,8 +11,8 @@
   <link rel="stylesheet" href="static/css/index.css" />
   <link rel="stylesheet" href="static/css/swiper.min.css" />
 </head>
-<script type="text/javascript" src="static/script/axios.min.js"></script>
-<script type="text/javascript" src="static/script/vue.js"></script>
+<script type="text/javascript" src="script/axios.min.js"></script>
+<script type="text/javascript" src="script/vue.js"></script>
 <script type="text/javascript" src="static/script/jquery.min.js"></script>
 <script type="text/javascript" src="static/script/layer/layer.js"></script>
 <body>
@@ -26,8 +26,8 @@
         <i class="iconfont icon-ai-arrow-down"></i>
       </div>
       <div class="topbar-right" th:if="${session.userLogin == null}">
-        <a th:href="@{/UserServlet(method=toLoginPage)}" href="pages/user/login.html" class="login">登录</a>
-        <a th:href="@{/UserServlet(method=toRegisterPage)}" href="pages/user/regist.html" class="register">注册</a>
+        <a th:href="@{user/toLoginPage}" href="pages/user/login.html" class="login">登录</a>
+        <a th:href="@{user/toRegisterPage}" href="pages/user/regist.html" class="register">注册</a>
 
         <a th:href="@{/CartServlet(method=toCartPage)}" class="cart iconfont icon-gouwuche">购物车
           <div class="cart-num" v-if="totalCount > 0">{{totalCount}}</div>

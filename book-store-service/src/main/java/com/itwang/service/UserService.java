@@ -1,5 +1,7 @@
 package com.itwang.service;
 
-public interface UserService {
+import com.itwang.pojo.User;
 
+public interface UserService {
+//    User userLogin(String userName, String password);
 }
