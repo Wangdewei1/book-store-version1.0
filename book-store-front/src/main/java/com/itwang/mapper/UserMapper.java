@@ -2,9 +2,10 @@ package com.itwang.mapper;
 
 import com.itwang.pojo.User;
 import com.itwang.pojo.UserExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Component;
+
+import java.util.List;
+
 public interface UserMapper {
     int countByExample(UserExample example);
 

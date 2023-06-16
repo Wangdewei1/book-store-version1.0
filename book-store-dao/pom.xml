@@ -10,9 +10,33 @@
 
     <artifactId>book-store-dao</artifactId>
     <packaging>jar</packaging>
-
+    <!--日志-->
     <dependencies>
 
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>5.3.27</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.25</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>2.19.0</version>
+        </dependency>
+
+        <!--mybatis-->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>2.0.4</version>
+        </dependency>
         <!---->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -39,10 +63,10 @@
             <artifactId>mybatis</artifactId>
         </dependency>
         <!--log4j-->
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>log4j</groupId>-->
+<!--            <artifactId>log4j</artifactId>-->
+<!--        </dependency>-->
         <!--lombok 注解实体类-->
         <dependency>
             <groupId>org.projectlombok</groupId>

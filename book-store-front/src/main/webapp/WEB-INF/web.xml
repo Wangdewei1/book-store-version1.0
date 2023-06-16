@@ -119,6 +119,17 @@
         <url-pattern>/auth/OrderServlet</url-pattern>
     </servlet-mapping>-->
     <!--配置DispatcherServlet-->
+
+    <!--配置全局-->
+<!--    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:spring-core.xml</param-value>
+    </context-param>
+    &lt;!&ndash;配置监听器&ndash;&gt;
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>-->
+
     <servlet>
         <servlet-name>DispatcherServlet</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
