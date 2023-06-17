@@ -1,10 +1,12 @@
 package com.itwang.controller;
 
+import com.itwang.common.ResultVo;
 import com.itwang.pojo.User;
 import com.itwang.service.UserService;
 import com.itwang.utils.MD5Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,23 +37,32 @@ public class UserController {
 
     /**
      * 登录功能
-     * @param modelAndView
+     * @param
      * @return
      */
     @PostMapping("/login")
-    public ModelAndView userLogin(@RequestBody User user, ModelAndView modelAndView, HttpServletRequest request, HttpSession session){
+    public ResultVo userLogin(@RequestBody User user, Model model, HttpServletRequest request, HttpSession session){
+        System.out.println("user = " + user);
         String username = request.getParameter("username");
         String password = MD5Utils.getMD5Utils(request.getParameter("password").replaceAll("==", ""));
-        user = userService.userLogin(username,password);
-        if (null != user){
-            modelAndView.addObject("msg", "用户名或者密码不正确，登陆失败！");
-            modelAndView.setViewName("user/login");
-            return modelAndView;
+        User userLogin = userService.userLogin(username,password);
+        if (null != user && user == userLogin){
+            model.addAttribute("msg", "用户名或者密码不正确，登陆失败！");
+            ResultVo resultVo = new ResultVo(
+                    true,
+                    "操作成功",
+                    user
+            );
+            return resultVo;
          } else {
             session.setAttribute("userLogin",user);
             session.setMaxInactiveInterval(60*30);
-            modelAndView.setViewName("user/login_success");
-            return modelAndView;
+            ResultVo resultVo = new ResultVo(
+                    false,
+                    "登入失败",
+                    null
+            );
+            return resultVo;
         }
     }
 
